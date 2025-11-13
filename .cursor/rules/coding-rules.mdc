@@ -1,0 +1,89 @@
+---
+alwaysApply: true
+---
+
+Beati Cafe Frontend Coding Rules (Next.js + TailwindCSS)
+
+Separation of Concerns & Mock Data
+
+Always abstract logic, data, and UI.
+
+Never place mock data directly inside a .tsx component file.
+
+Keep mock data in a dedicated data/ file and import it where needed.
+
+Example:
+
+app/home/data/products.ts
+app/home/data/team.ts
+
+Single Responsibility Principle (SRP)
+
+Each component, function, or module should handle one responsibility only.
+
+Avoid bloated .tsx files by splitting large components into smaller, reusable pieces.
+
+Example:
+
+app/home/components/
+├── Hero.tsx
+├── ProductCard.tsx
+└── CTAButton.tsx
+
+Folder & File Structure
+
+Organize app/ folders by page or feature.
+
+Follow kebab-case for folder and file names.
+
+Example for a home page:
+
+app/home/
+├── components/ # Reusable UI components
+│ ├── hero.tsx
+│ ├── product-card.tsx
+│ └── cta-button.tsx
+├── data/ # Mock/static data
+│ └── products.ts
+├── hooks/ # Custom hooks
+│ └── useFeaturedProducts.ts
+├── page.tsx # Main home page component
+└── layout.tsx # Optional page layout
+
+Naming Conventions
+
+Files / Folders: kebab-case (product-card.tsx)
+
+Variables: camelCase (productList, isLoading)
+
+Functions / Components: PascalCase (SubmitForm, ProductCard)
+
+Constants: UPPER_SNAKE_CASE (MAX_PRODUCTS)
+
+Types / Interfaces: PascalCase (Product, UserProfile)
+
+Hooks: camelCase starting with use (useFetchProducts)
+
+UI & Styling
+
+Use TailwindCSS for all styling.
+
+Prefer shadcn/ui components for buttons, cards, forms, and layout elements.
+
+Maintain a clean, modern, and cozy aesthetic: warm colors, smooth shadows, rounded corners.
+
+Keep responsive design in mind (desktop + mobile).
+
+Type Safety
+
+Use TypeScript for all props, state, and mock data.
+
+Define interfaces and types in dedicated files if needed.
+
+Avoid any unless strictly necessary.
+
+Reusability & Modularity
+
+Components, hooks, and utilities should be reusable across pages.
+
+Avoid duplication by extracting common UI elements or logic.
