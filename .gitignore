@@ -10,6 +10,11 @@
 !.yarn/releases
 !.yarn/versions
 
+#readmes
+README.md
+PROJECT_SUMMARY.md
+CHATBOT_SETUP.md
+
 # testing
 /coverage
 

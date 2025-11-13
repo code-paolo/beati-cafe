@@ -7,7 +7,13 @@ import { ProductCard } from "@/components/product-card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
-import { UtensilsCrossed, Search, SlidersHorizontal, X, Check } from "lucide-react";
+import {
+  UtensilsCrossed,
+  Search,
+  SlidersHorizontal,
+  X,
+  Check,
+} from "lucide-react";
 
 type Category = "all" | "coffee" | "tea" | "pastry" | "food";
 type SortOption =
@@ -64,10 +70,7 @@ export function Catalog() {
     const params = new URLSearchParams();
 
     // Handle multiple categories
-    if (
-      selectedCategories.length > 0 &&
-      !selectedCategories.includes("all")
-    ) {
+    if (selectedCategories.length > 0 && !selectedCategories.includes("all")) {
       params.set("category", selectedCategories.join(","));
     }
 
@@ -97,10 +100,7 @@ export function Catalog() {
   let filteredProducts = products;
 
   // Filter by category (handle multiple categories)
-  if (
-    selectedCategories.length > 0 &&
-    !selectedCategories.includes("all")
-  ) {
+  if (selectedCategories.length > 0 && !selectedCategories.includes("all")) {
     filteredProducts = filteredProducts.filter((product) =>
       selectedCategories.includes(product.category)
     );
