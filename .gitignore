@@ -17,7 +17,7 @@
 .CHATBOT_SETUP.md
 
 # cursor
-.cursorrules
+.cursor/rules/*
 .cursor/
 
 # testing

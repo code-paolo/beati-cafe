@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { Catalog } from "./_components/catalog";
 
 export const metadata = {
@@ -9,7 +10,9 @@ export const metadata = {
 export default function MenuPage() {
   return (
     <main className="mt-26">
-      <Catalog />
+      <Suspense fallback={<div className="flex items-center justify-center min-h-screen">Loading menu...</div>}>
+        <Catalog />
+      </Suspense>
     </main>
   );
 }
