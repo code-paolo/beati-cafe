@@ -11,9 +11,9 @@
 !.yarn/versions
 
 #readmes
-README.md
-PROJECT_SUMMARY.md
-CHATBOT_SETUP.md
+.README.md
+.PROJECT_SUMMARY.md
+.CHATBOT_SETUP.md
 
 # testing
 /coverage
