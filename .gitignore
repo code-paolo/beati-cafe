@@ -10,10 +10,15 @@
 !.yarn/releases
 !.yarn/versions
 
+
 #readmes
 .README.md
 .PROJECT_SUMMARY.md
 .CHATBOT_SETUP.md
+
+# cursor
+.cursorrules
+.cursor/
 
 # testing
 /coverage
